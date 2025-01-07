@@ -177,11 +177,6 @@ def main():
         # Submit button
         if st.button("Submit Quiz"):
             st.session_state.submitted = True
-
-        # Display final score
-            score_percentage = (marks / len(st.session_state.questions)) * 100
-            st.subheader("Final Score")
-            st.write(f"You got {marks} out of {len(st.session_state.questions)} questions correct ({score_percentage:.1f}%)")
             
         # Show results after submission
         if st.session_state.submitted:
@@ -204,6 +199,11 @@ def main():
                     st.error("Incorrect ❌")
                 
                 st.markdown("---")
+
+            # Display final score
+            score_percentage = (marks / len(st.session_state.questions)) * 100
+            st.subheader("Final Score")
+            st.write(f"You got {marks} out of {len(st.session_state.questions)} questions correct ({score_percentage:.1f}%)")
 
 if __name__ == "__main__":
     main()
