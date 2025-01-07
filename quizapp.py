@@ -111,7 +111,7 @@ def fetch_questions(text_content, quiz_level):
             response_content = completion.choices[0].message.content
             
             # Debug: Display raw response (comment out in production)
-            st.write("Debug - Raw API Response:", response_content)
+            # st.write("Debug - Raw API Response:", response_content)
             
             try:
                 # Try to parse the JSON response
